@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="nav.toggle()"><mat-icon >menu</mat-icon></button>
+</mat-toolbar>
+<mat-sidenav-container class="sidenav-wrapper" >
+  <mat-sidenav #nav>
+    <a [routerLink]="['profile']" color="primary">
+      <button mat-button>
+        <mat-icon>profile</mat-icon>
+      </button>
+    </a>
+    <br>
+    <br>
+    <a [routerLink]="['about']" color="primary">
+      <button mat-button>
+        <mat-icon>about</mat-icon>
+      </button>
+    </a>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
